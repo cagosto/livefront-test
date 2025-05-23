@@ -3,6 +3,10 @@ export type HouseNames =
   | 'slytherin'
   | 'ravenclaw'
   | 'hufflepuff';
+
+/**
+ * Border color for the different houses in Harry Potter.
+ */
 export default function houseColor(house: HouseNames) {
   switch (house.toLowerCase()) {
     case 'gryffindor':
