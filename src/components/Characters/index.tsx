@@ -30,7 +30,7 @@ export default function Characters({ data }: CharacterProps) {
             name="character_search"
             type="search"
             value={searchTerm}
-            className="rounded border-2 border-accent bg-secondary text-text outline-0 px-3 py-1"
+            className="rounded border-2 border-white bg-secondary text-text outline-0 px-3 py-1 focus:shadow-2xs focus:border-accent"
             onChange={handleChange}
             placeholder="Character Name"
           />

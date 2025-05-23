@@ -71,7 +71,7 @@ export default function Bio({ bio }: BioProps) {
         {/* Wand Sections */}
         {!isEmpty && (
           <div className="flex flex-col gap-1.5">
-            <p className="text-sm font-light text-accent">Wand:</p>
+            <p className="text-sm font-light text-text text-shadow-sm">Wand:</p>
             <ul className="ml-4 list-disc space-y-2">
               {bio.wand.wood && (
                 <WandItem category="Wood" value={bio.wand.wood} />
