@@ -3,11 +3,34 @@ import { PropsWithChildren } from 'react';
 type headers = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 interface HeadlineProps {
+  /** The HTML heading element to render (semantic structure) */
   type: headers;
+  /** The visual styling variant to apply (visual appearance) */
   variant: headers;
+  /** Additional CSS classes to apply to the heading */
   classes?: string;
 }
 
+/**
+ * A flexible heading component that separates semantic HTML structure from visual appearance.
+ *
+ * This component allows you to specify both the HTML element type and the visual styling variant
+ * independently, enabling proper heading hierarchy while maintaining desired visual design.
+ *
+ * @example
+ * ```tsx
+ * // Basic usage - semantic and visual alignment
+ * <Headline type="h1" variant="h1">Main Title</Headline>
+ *
+ * // Semantic vs visual separation for proper hierarchy
+ * <Headline type="h2" variant="h1">Section Title That Looks Like Main Title</Headline>
+ *
+ * // With additional custom classes
+ * <Headline type="h3" variant="h2" classes="text-blue-600 mb-4">
+ *   Custom Styled Heading
+ * </Headline>
+ * ```
+ */
 export default function Headline({
   type,
   variant,

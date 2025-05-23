@@ -1,7 +1,13 @@
 interface WandItemProps {
+  // Eyebrow of wand details
   category: string;
+  // Wand details
   value: string;
 }
+
+/**
+ * List item for wand details
+ */
 export default function WandItem({ category, value }: WandItemProps) {
   return (
     <li>

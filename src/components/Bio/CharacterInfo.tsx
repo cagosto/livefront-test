@@ -1,5 +1,7 @@
 interface CharacterInfoProps {
+  // Section of display
   hairline: string;
+  //  Character info
   info: string;
 }
 

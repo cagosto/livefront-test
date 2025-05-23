@@ -6,9 +6,15 @@ import Headline from '../Headline';
 import Link from 'next/link';
 
 interface CharacterProps {
+  // Current Character for display
   character: Character;
+  // Search value for Text highlight
   searchTerm: string;
 }
+
+/**
+ * Individual Character display with details
+ */
 export default function CharacterItem({
   character,
   searchTerm,
@@ -19,6 +25,7 @@ export default function CharacterItem({
     <div className="bg-secondary rounded p-2 lg:min-h-[300px] relative overflow-hidden group shadow-sm shadow-accent">
       <Link href={`character/${character.name}`}>
         <div className="absolute scale-x-0 bottom-0 top-0 px-4 py-7 bg-accent/80 right-0 left-0 transition group-hover:scale-x-100 origin-right group-hover:origin-left z-10">
+          {/* Text higligt */}
           <Headline type="h3" variant="h3">
             {parts.map((parts, index) => (
               <span
@@ -30,6 +37,7 @@ export default function CharacterItem({
             ))}
           </Headline>
           <hr className="my-3" />
+          {/* Details */}
           <ul className="space-y-2">
             <li>
               <span className="font-black">Actor:</span> {character.actor}

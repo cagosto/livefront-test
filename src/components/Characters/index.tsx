@@ -6,8 +6,12 @@ import { ChangeEvent, useState } from 'react';
 import Headline from '../Headline';
 
 interface CharacterProps {
+  // List Of Characters to display
   data: Character[];
 }
+/**
+ * List of Characters that can be filtered down.
+ */
 export default function Characters({ data }: CharacterProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -21,6 +25,7 @@ export default function Characters({ data }: CharacterProps) {
           <Headline type="h3" variant="h3">
             Find Your Favorite Character
           </Headline>
+          {/* Search */}
           <input
             name="character_search"
             type="search"
@@ -31,6 +36,7 @@ export default function Characters({ data }: CharacterProps) {
           />
         </div>
       </div>
+      {/* Characters List */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-3">
         {data
           .filter((v) =>

@@ -6,6 +6,7 @@ import CharacterInfo from './CharacterInfo';
 import WandItem from './WandItem';
 
 interface BioProps {
+  // Character details
   bio: Character;
 }
 
@@ -13,6 +14,9 @@ export enum BIO_TEST_IDS {
   holder = 'test-bio-holder',
 }
 
+/**
+ * Character Bio info
+ */
 export default function Bio({ bio }: BioProps) {
   const isEmpty = Object.values(bio.wand).every((v) => v === '' || v === null);
 
@@ -64,6 +68,7 @@ export default function Bio({ bio }: BioProps) {
         {bio.patronus && (
           <CharacterInfo hairline="Patronus" info={bio.patronus} />
         )}
+        {/* Wand Sections */}
         {!isEmpty && (
           <div className="flex flex-col gap-1.5">
             <p className="text-sm font-light text-accent">Wand:</p>
