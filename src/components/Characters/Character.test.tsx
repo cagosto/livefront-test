@@ -43,10 +43,7 @@ describe('Character', () => {
     expect(title).toHaveTextContent(data.name);
     expect(screen.getByText('Harr')).toHaveClass('font-black');
     expect(listItems.length).toBe(4);
-    expect(img).toHaveAttribute(
-      'src',
-      '/_next/image?url=%2Fimages%2Fimage-not-found.jpg&w=3840&q=75'
-    );
+    expect(img).toHaveAttribute('src', '/images/missing-person.svg');
     expect(img).toHaveAttribute('alt', data.actor);
   });
 });
