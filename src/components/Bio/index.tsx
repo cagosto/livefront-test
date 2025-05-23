@@ -25,7 +25,7 @@ export default function Bio({ bio }: BioProps) {
     >
       <div className="flex flex-col sm:flex-row justify-between items-center gap-5 ">
         <Headline type="h3" variant="h3">
-          <span className="block text-base font-light text-accent text-center sm:text-left">
+          <span className="block text-base font-light text-text text-center sm:text-left text-shadow-sm">
             House
           </span>
           {bio.house}

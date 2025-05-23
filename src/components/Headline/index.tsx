@@ -12,7 +12,7 @@ export default function Headline({
   type,
   variant,
   children,
-  classes,
+  classes = '',
 }: PropsWithChildren<HeadlineProps>) {
   const variantStyles = {
     h1: 'text-2xl md:text-3xl lg:text-4xl font-bold',
@@ -24,22 +24,23 @@ export default function Headline({
   };
   // Get the styles based on variant
   const styles = variantStyles[variant];
+  const titleStyles = `${styles} ${classes}`.trim();
 
   switch (type) {
     case 'h1':
-      return <h1 className={`${styles} ${classes}`}>{children}</h1>;
+      return <h1 className={titleStyles}>{children}</h1>;
     case 'h2':
-      return <h2 className={`${styles} ${classes}`}>{children}</h2>;
+      return <h2 className={titleStyles}>{children}</h2>;
     case 'h3':
-      return <h3 className={`${styles} ${classes}`}>{children}</h3>;
+      return <h3 className={titleStyles}>{children}</h3>;
     case 'h4':
-      return <h4 className={`${styles} ${classes}`}>{children}</h4>;
+      return <h4 className={titleStyles}>{children}</h4>;
     case 'h5':
-      return <h5 className={`${styles} ${classes}`}>{children}</h5>;
+      return <h5 className={titleStyles}>{children}</h5>;
     case 'h6':
-      return <h6 className={`${styles} ${classes}`}>{children}</h6>;
+      return <h6 className={titleStyles}>{children}</h6>;
     default:
-      return <h2 className={`${styles} ${classes}`}>{children}</h2>;
+      return <h2 className={titleStyles}>{children}</h2>;
   }
 }
 

@@ -54,7 +54,7 @@ export default function CharacterItem({
         </div>
 
         <Image
-          src={character.image || '/images/image-not-found.jpg'}
+          src={character.image || '/images/missing-person.svg'}
           alt={character.actor}
           width={0}
           height={0}
